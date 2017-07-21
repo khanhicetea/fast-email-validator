@@ -20,6 +20,10 @@ Currently this tool checks the following:
 
 ^ **Data used for these checks can be found [here](https://github.com/khanhicetea/fast-email-validator/tree/master/src/database)**
 
+# Why is it fast ?
+
+Because we compile [the text database](https://github.com/khanhicetea/fast-email-validator/tree/master/src/database) to real PHP object, and use `isset` function to check if a key existed.
+
 # Installation
 
 ```bash
