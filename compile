@@ -1,0 +1,26 @@
+#!/usr/bin/env php
+<?php
+
+include './src/Utils.php';
+
+$files = glob('./src/database/*.txt', GLOB_BRACE);
+foreach($files as $file) {
+    $data_name = substr(basename($file), 0, -4);
+    $data_file_name = $data_name.'.php';
+
+    if ($fr = fopen($file, 'r')) {
+        $names = [];
+        $fw = fopen('./src/Data/'.$data_file_name, 'w');
+        fwrite($fw, "<?php namespace FastEmailValidator\\Data; class $data_name { ");
+        while (($line = fgets($fr)) !== false) {
+            $new_name = FastEmailValidator\Utils::normalizeObjectName($line);
+            if (!isset($names[$new_name])) {
+                fwrite($fw, "public \$$new_name = true;");
+                $names[$new_name] = true;
+            }
+        }
+        fwrite($fw, "}");
+        fclose($fw);
+        fclose($fr);
+    }
+}
