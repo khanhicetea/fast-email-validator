@@ -18,7 +18,7 @@ Currently this tool checks the following:
 | Disposable email provider^  | Checks if the email is a disposable email (e.g person@10minutemail.com).  |
 | Free email provider^  | Checks if the email is a free email (e.g person@yahoo.com).  |
 
-^ **Data used for these checks can be found [here](https://github.com/khanhicetea/fast-email-validator/tree/master/src/data)**
+^ **Data used for these checks can be found [here](https://github.com/khanhicetea/fast-email-validator/tree/master/src/database)**
 
 # Installation
 
