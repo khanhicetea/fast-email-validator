@@ -1,5 +1,7 @@
 **Fast email validation library for PHP 7+**
 
+[![Build Status](https://travis-ci.org/khanhicetea/fast-email-validator.svg?branch=master)](https://travis-ci.org/khanhicetea/fast-email-validator)
+
 Inspired by [daveearley's Email-Validation-Tool](https://github.com/daveearley/Email-Validation-Tool)
 
 The aim of this library is to offer a more detailed email validation report than simply checking if an email is the valid format, and also to make it possible to easily add custom validations.
